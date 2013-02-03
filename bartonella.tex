@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[11pt,twocolumn]{article}
 \usepackage{graphicx}
 \title{Case Control study into the association of B. henselae infection with Feline Uveitis.}
 \author{Hugh Crockford}
@@ -26,7 +26,7 @@
 		\emph{Bartonella sp.} has also been implicated in cases of chronic stomatits, anemia, CNS disorders\cite{Nasir2005}.
 		\emph{Bartonella sp.} is an important pathogen from a human health perspective as well, being responsible for Cat Scratch Disease, 
 		\emph{Bartonella sp.} also causes ocular complications in 5 to 10 percent of people that become infected through Cat Scratch Disease \cite{Wade2000}.
-		The reference population for this study is , and study findings will be generalisable to the ~85 million privately owned cats in the United States \cite{HSUSown}.
+		The reference population for this study is privately owned domesticated cats in the United States, and study findings will be generalisable to the ~85 million cats in the United States \cite{HSUSown}.
 
 		\subsection{Objectives and Study Hypothesis}
 			The Objective of this study are as follows: 
@@ -41,6 +41,7 @@
 
 	Exposure will be measured with a comercially available Western immunoblot test \cite{febart}. This test is widely used and correlates more closely with the ability to isolate \emph{Bartonella sp.} from cats than does the Immunofluorescent assay or Enzyme Linked Immunosorbant assay \cite{Jr1995}. 
 	Western Blot results of 3+ and 4+ will be considered positive for the purposes of this study. 
+	The use of an objective exposure method effectively masks Practitioners when collecting samples from controls, and limits recall/reporting bias.
 
 
 	Case definition will be uveitis positive as diagnosed by tono.. with a cutoff of .
@@ -54,13 +55,22 @@
 	Sample size was requirements were calculated using the prevalence figure observed in part one of this study..
 
 	Controls will be taken from cats visiting banfield hospitals for annual checkups. As a part of their checkup, cats are routinely tested for FIV and FeLV , and Toxoplasmosis according to company policy. This removes the potential confounder of FIV/FeLV which is another cause of uveitis in cats. These cats represent a broud sample of the reference population, that could themselves develop uveitis as a result of \emph{Bartonella sp.} exposure.
-	
+
+	Data quality was good, with the use of a large database allowing any incomplete records to be eliminated without suffering.
+	Collection of histories by DVM's and Registered Veterinary Technicians ensures quality and consistency, and case definitons by qualified opthalmologists ensures good case definitions.
 
 	\subsection{Statistical Evaluation}
+		Data was be collected into an SQL Database and queried. Statistical analysis was performed intially performed using Fischers exact test to compare prevelence rates between cases and control. 
+		Further modelling was undertaken utilising a conditional logistic regression model, both with and without age, housing status, date of sample collection, and geographical location included. 
+		Covariates were included in the analysis if the odds ratio for exposure changed by 10\% or more after their addition.
+		Both geographic location and age were included in the final analysis, although housing status and age were not deemd signifigant (this may indicate cats admitted to a veterinarian for regular checkups are more likely to have regular flea control treatment, regardless of housing status)
+
 		Age, geographic location, housing status, and \emph{Bartonella sp.} status were entered into ..
 		Cats were grouped into 4 groups (<2, 2-5, 5-10, >10) as \emph{Bartonella sp.} infection is more common in younger cats
 		flea risk was catagorically assigned high or low, based on a combination of indoor/outdoor status and state of origin (Alaska, Arizona, Colorado, Idaho, Montana, Nevada, New Mexico, Utah, and Wyoming all assigned low risk, all other states high, according to \cite{Jameson1995a})
-		Cases and controls were matched for age and geographical location (Each University Veterinary Hospital and the Banfield hospitals in the same state)
+		Cases and controls were matched for age and geographical location (Each University Veterinary Hospital and the Banfield hospitals in the same state).
+		This matchign for location ensures comparable case and contrl populations, removing potential selection bias. Further control cats are selected from cats undergoing annual vaccination and checkup, showing a similar level of care and investment in their animals health by owner, and hence would probaby take their animal to investigate any incidence of uveitis. %reword
+
 
 	% Controls - two groups - healthy and submitted to hospital?
 
@@ -73,6 +83,9 @@
 		Using cats from the same reference population is better than previous studies that utilised cats from an animal shelter. Cats in a shelter are more likely to have been outdoors and exposed to fleas, and hence be seropositive, reducing any observed difference.
 		Using indoor/outdoor status as proxy for flea exposure was chosen to reduce the . 
 		This design coul dbe imporved with actual flea exposure history from owners, although there is potential for misclassification based on owners not admitting to fleas.
+		The vauge clinical signs associated with uveitis manke.
+		the difficulty in coming u pwith a strict case defintion for uveitis is another issue with theis study. Relying on Board Certified Opthalmologists are certainly the most qualified to assess cases of uveitis, there is still the possibility of diagnostic criteria differing between clinicians. This is in comparison to other diseases of the eys such as glaucome (also a potential sequale to uveitis) where an objective test (measuring Intra ocular pressure with tonometry) and strict cutoff value can be utilised to form a consistsent case definition.
+		further the chance of some controls having uveitis that was missed on the usual cursory examination at their annual vaccination consultatoin cannot be ruled out. This differential miscalassification would reduce any effect seen as more controls would actually be cases.
 
 \newpage
 \bibliographystyle{unsrt}
