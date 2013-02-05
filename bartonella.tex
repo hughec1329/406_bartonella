@@ -51,7 +51,7 @@ his study is awesome.
 		While cats are generally considered to be subclinical carriers of \emph{Bartonella sp.}, it has been implicated in cases of chronic stomatits, anemia, CNS disorders, and Uveitis \cite{Nasir2005}.
 		The association of \emph{Bartonella sp.} and uveitis was first reported by Lappin et al\cite{Lappin1999}, and subsequent studies have found conflicting results, with Ketring reporting increased serum antibodies to \emph{Bartonella sp.} in cats with uveitis\cite{Ketring2004}, while Fontanelle found cats without uveitis more likely to have \emph{Bartonella sp.} antibodies than cats with uveitis.\\
 		These studies both had low numbers (251 and 113 cats with uveitis respectively), and did not adequately investigate the effects of geographic location on prevalence of \emph{Bartonella sp.} infection in control cats.
-		The proposed biological rationale behind this association can be seen in the attached \hyperref[fig:causal]{Causal Diagram}.
+		The proposed biological rationale behind this association can be seen in the attached \hyperref[fig:1]{Causal Diagram}.
 	
 		This study will utilise large numbers of cats with time, age, housing status, and geographic location recorded, and will determine if a relationship exists between uveitis and seropositivity to  \emph{Bartonella sp.}, in the form of a case control study evaluating records from two large Veterinary Medical record Databases \cite{bark12,UniversityVeterinary}	
 		The reference population for this study is privately owned domesticated cats in the United States, and study findings will be generalisable to the ~85 million cats in the United States \cite{HSUSown}.
@@ -70,6 +70,7 @@ his study is awesome.
 	
 
 	These databases were queried to locate both cases and controls. SQL queries utilising regular expression pattern matching located records of interest by matching keywords, and each record was inspected by the author to determine if it fit study criteria. Because of the large number of records available, any record that was marginally outside parameters detailed below was discarded.
+	Records collected between 2011-01-01 and 2012-12-31 were included for analysis in this study.
 
 
 	Cases of uveitis were diagnosed by a board certified ophthalmologists at either the University Veterinary Hospital or Banfield's In house opthalmology service.
@@ -99,7 +100,7 @@ his study is awesome.
 	Ethical permission was granted by UC Davis School of Veterinary Medicine, and appropriate IACUC forms can be found in the online companion to this article.
 
 	The unit of analysis for this study is the individual cat. 
-	Sample size requirements were calculated using the average prevalence rates as reported by Jameson \cite{Jameson1995a}. Calculations can be seen in \hyperref[tab:1]{Table 1}
+	Sample size requirements were calculated a control prevalence of 20\%, the average rate as reported by Jameson \cite{Jameson1995a}. Calculations can be seen in \hyperref[fig:samplesizecalc]{Attached code}
 
 
 	Data integrity was maintained throuhgout the study using 100\% digital recording and record managment. 
@@ -111,13 +112,13 @@ his study is awesome.
 	\newpage
 	\subsection{Statistical Evaluation}
 
-		Statistical analysis was performed intially performed using Chi Squares test to compare prevelence rates between cases and control groups. 
+		Statistical analysis was intially performed using Fischers Exact test to compare prevelence rates between cases and control groups. p values of comparison are shown.
 		Further modelling was undertaken utilising a conditional logistic regression model, both with and without age, housing status, date of sample collection, and geographical location included. 
 		Covariates were included in the final model if the odds ratio for exposure changed by 10\% or more after their addition.
 		Geographic location, age, and housing status were included in the final analysis.
 
 
-		Cats were grouped into 4 agegroups (\textless 2, 2-5, 5-10, \textgreater 10) as \emph{Bartonella sp.} infection is more common in younger cats
+		Cats were grouped into 2 age groups (\textless 2, \textgreater 2) as \emph{Bartonella sp.} infection is more common in younger cats
 		Flea risk was catagorically assigned high or low, based on a combination of indoor/outdoor status and state of origin (Alaska, Arizona, Colorado, Idaho, Montana, Nevada, New Mexico, Utah, and Wyoming all assigned low risk, all other states high, according to \cite{Jameson1995a})
 		Geographical location was assessed at the state level, with each University Veterinary Hospital and surrounding Banfield hospitals forming one category.
 		This matching for location ensures comparable case and control populations, removing potential selection bias. 
@@ -129,11 +130,13 @@ his study is awesome.
 
 
 		Baseline data on study populations can be seen in the attached \hyperref[tab:1]{Table 1} and show the groups are comparable on all baseline characteristics.
-		\hyperref[tab:2]{Table 2} shows the results of this study with effect measures and p values.
 
 
-		Previous exposure to \emph{Bartonella sp.} was shown to be signifigantly associated with feline uveitis ( p-value 0.023 )
-		This effect was modified by geography, age, and ..
+		\hyperref[tab:2]{Table 2} shows the results of this study with effect measures and p values. 
+		Initial comparison of seroprevalence rates between cases and controls revealed cats with uveitis had a higher seropositive rate than cats without uveitis ( P-value = 0.02 ) 
+		Following the addition of age, housing status, and geographical location, seroprevalence rates were still higher in cats with uveitis, cats housed outdoors, and acts in high risk states (P-values = 
+		Age was not found to be signifigant.
+		Odds ratios (OR) derived from the models were interpreted as measures of increased risk of disease
 
 		(this may indicate cats admitted to a veterinarian for regular checkups are more likely to have regular flea control treatment, regardless of housing status)
 
@@ -168,9 +171,40 @@ his study is awesome.
 		consistenncy of case definition in 
 		detection of uveitis in controls.
 \newpage
-\newpage
+
+\begin{figure*}[h!]
+	\centering
+	\includegraphics[scale=0.3]{figure1.jpg}
+	\caption{Flow Diagram showing proposed Biological Rationale for study, including exposure, outcome and covariates }
+	\label{fig:1}
+\end{figure*}
+
+\begin{figure*}[h!]
+	\centering
+	\includegraphics[scale=0.5]{table1.jpg}
+	\caption{Characteristics of study participants and sample size calulations.}
+	\label{tab:1}
+\end{figure*}
+ 
+\begin{figure*}[h!]
+	\centering
+	\includegraphics[scale=0.5]{table2.jpg}
+	\caption{Odds Ratios (OR) for the association between uveitis and \emph{Bartonella sp.} infection status, age, housing status and geographical location.}
+	\label{tab:2}
+\end{figure*}
+
+\begin{figure*}[h!]
+	\centering
+	\includegraphics[scale=0.5]{samplesizecalc.jpg}
+	\caption{Sample size function and calculation output from R.}
+	\label{fig:samplesizecalc}
+\end{figure*}
+
+\clearpage
 \bibliographystyle{unsrt}
 \bibliography{bart.bib}
+
+
 
 \end{document}
 
