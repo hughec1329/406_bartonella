@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \hypersetup{colorlinks = true, linkcolor = blue, citecolor = blue}
-\title{Case Control study into the association of B. henselae infection with Feline Uveitis.}
+\title{Investigation into the relationship between B. henselae infection and Feline Uveitis in domestic cats in the United States.}
 \author{Hugh Crockford}
 \date{\today}
 \begin{document}
@@ -10,18 +10,15 @@
 	\begin{@twocolumnfalse}
 	\maketitle
 	\begin{abstract}
-	This study is awesome.TTTTTTTTTTThis study is awesome.
-his study is awesome.
-his study is awesome.
-his study is awesome.
-his study is awesome.
-his study is awesome.
-his study is awesome.
-his study is awesome.
-his study is awesome.
-his study is awesome.
-his study is awesome.
+		This study's objective was to determine if there is an association between \emph{Bartonella sp.} as measured by Western Blot and Feline Uveitis. 
+		Medical records were queried from 2 Veterinary Medical Record Databases to find 821 cases of uveitis and 1658 controls.
+		The physical examination findings, histories, and diagnostic test results were collected and \emph{Bartonella sp.} exposure status assessed using stored blood samples.
 
+
+		Cases were 2.1 times more likely to be seropositive for \emph{Bartonella sp.} (p \textless 0.05), and housing status and geographical location were found to modify this effect, probably due to association with flea exposure.
+
+
+		The results of this study indicate there is a significant relationship between uveitis and \emph{Bartonella sp.} exposure, and support diagnostic testing for \emph{Bartonella sp.} when working up a uveitis case.
 	\end{abstract}
 \end{@twocolumnfalse}
 ]
@@ -56,9 +53,8 @@ his study is awesome.
 		This study will utilise large numbers of cats with time, age, housing status, and geographic location recorded, and will determine if a relationship exists between uveitis and seropositivity to  \emph{Bartonella sp.}, in the form of a case control study evaluating records from two large Veterinary Medical record Databases \cite{bark12,UniversityVeterinary}	
 		The reference population for this study is privately owned domesticated cats presenting to veterinary hospitals in the United States, and study findings will be generalisable to the ~85 million cats in the United States \cite{HSUSown}.
 		
-		\newpage
 
-			The Objective of this study are to study the relationship between infection with \emph{Bartonella sp.} and feline uveitis as diagnosed by board certified ophthalmologists.
+			The Objective of this study is to study the relationship between infection with \emph{Bartonella sp.} and feline uveitis as diagnosed by board certified ophthalmologists.
 
 
 			The Study Hypothesis is there is a higher incidence of uveitis among cats that have been exposed to \emph{Bartonella sp.}.
@@ -70,7 +66,7 @@ his study is awesome.
 	
 
 	These databases were queried to locate both cases and controls. SQL queries utilising regular expression pattern matching located records of interest by matching keywords, and each record was inspected by the author to determine if it fit study criteria. Because of the large number of records available, any record that was marginally outside parameters detailed below was discarded.
-	Records collected between 2011-01-01 and 2012-12-31 were included for analysis in this study.
+	Records collected between 2012-01-01 and 2012-12-31 were included for analysis in this study.
 
 
 	Cases of uveitis were diagnosed by a board certified ophthalmologists at either the University Veterinary Hospital or Banfield's In house opthalmology service.
@@ -100,76 +96,79 @@ his study is awesome.
 	Ethical permission was granted by UC Davis School of Veterinary Medicine, and appropriate IACUC forms can be found in the online companion to this article.
 
 	The unit of analysis for this study is the individual cat. 
-	Sample size requirements were calculated a control prevalence of 20\%, the average rate as reported by Jameson \cite{Jameson1995a}. Calculations can be seen in \hyperref[fig:samplesizecalc]{Attached code}
+	Sample size requirements were calculated a control prevalence of 20\%, the average rate as reported by Jameson \cite{Jameson1995a}. Calculations can be seen in \hyperref[fig:samplesizecalc]{Attached code}.
+	Sample sizes actually used in this study far exceed those required to establish a biologically significant Odds Ratio difference as calculated above.
 
 
-	Data integrity was maintained throuhgout the study using 100\% digital recording and record managment. 
+	Data integrity was maintained throughout the study using 100\% digital recording and record management. 
 	Reproducible workflows were established utilising GNU Make files, documented, and can be found in the online article companion.
 	Data quality was strictly enforced, with the use of a large database allowing any incomplete records to be eliminated while maintaining high numbers of study participants.
 	Collection of histories by DVM's and Registered Veterinary Technicians ensures quality and consistency, and case diagnosis by qualified ophthalmologists using strict criteria should ensure consistent case definition.
 
 
-	\newpage
 	\subsection{Statistical Evaluation}
 
-		Statistical analysis was intially performed using Fischers Exact test to compare prevelence rates between cases and control groups. p values of comparison are shown.
+		Statistical analysis was initially performed using Fischer's Exact test to compare prevalence rates between cases and control groups. p values of comparison are shown.
 		Further modelling was undertaken utilising a conditional logistic regression model, both with and without age, housing status, date of sample collection, and geographical location included. 
 		Covariates were included in the final model if the odds ratio for exposure changed by 10\% or more after their addition.
 		Geographic location, age, and housing status were included in the final analysis.
 
 
 		Cats were grouped into 2 age groups (\textless 2, \textgreater 2) as \emph{Bartonella sp.} infection is more common in younger cats
-		Flea risk was catagorically assigned high or low, based on a combination of indoor/outdoor status and state of origin (Alaska, Arizona, Colorado, Idaho, Montana, Nevada, New Mexico, Utah, and Wyoming all assigned low risk, all other states high, according to \cite{Jameson1995a})
+		2 proxies for flea risk were evaluated, housing status (indoor/outdoor) and geographical location.Alaska, Arizona, Colorado, Idaho, Montana, Nevada, New Mexico, Utah, and Wyoming all assigned low risk, all other states high, according to \cite{Jameson1995a}
 		Geographical location was assessed at the state level, with each University Veterinary Hospital and surrounding Banfield hospitals forming one category.
 		This matching for location ensures comparable case and control populations, removing potential selection bias. 
-		Control cats are selected from cats undergoing annual vaccination and checkup, which demonstrates a certain level of care and investment in their animals health by owner. This ensures had their animal shown any signs of uveitis, the owners would probably take their animal to a pet hospital to investigate, and hece come from the same population as cases.
 
 
-		\newpage
+		Control cats were selected from cats undergoing annual vaccination and checkup, which demonstrates a certain level of care and investment in their animals health by owner. This ensures had their animal shown any signs of uveitis, the owners would probably take their animal to a pet hospital to investigate, and hence come from the same population as cases.
+
+
 \section{Results}
 
 
 		Baseline data on study populations can be seen in the attached \hyperref[tab:1]{Table 1} and show the groups are comparable on all baseline characteristics.
 
 
-		\hyperref[tab:2]{Table 2} shows the results of this study with effect measures and p values. 
-		Initial comparison of seroprevalence rates between cases and controls revealed cats with uveitis had a higher seropositive rate than cats without uveitis ( P-value = 0.03 ) 
+		\hyperref[tab:2]{Table 2} shows the results of this study (Odds Ratios and confidence intervals, and p values) with all significant covariates included.
+		Initial comparison of seroprevalence rates between cases and controls revealed cats with uveitis had a higher seropositive rate than cats without uveitis ( P-value = 0.02 ) 
+
+
 		Following the addition of age, housing status, and geographical location, seroprevalence rates were still higher in cats with uveitis, cats housed outdoors, and acts in high risk states (p-values = 0.2, 0.04, 0.01 respectively)
-		Age was not found to be signifigant and hence was not included in the final model.
-		Odds ratios (OR) derived from the models were interpreted as measures of increased risk of disease following application of the rare disease assumptiion ( True uveitis incindence rate is unknown but has been reported at ~ 2\% in the literature.)
+		Age was not found to be significant and hence was not included in the final model.
+		Odds ratios (OR) derived from the models were interpreted as measures of increased risk of disease following application of the rare disease assumption ( True uveitis incidence rate is unknown but has been reported at ~ 2\% in the literature.)
 
 
 \section{Discussion}
-		Potential interaction effects of housing status and geographic location were proposed at the beginning of the study and assesed during the analysis stage.
+		Potential interaction effects of housing status and geographic location were proposed at the beginning of the study and assessed during the analysis stage.
 		Odds ratios differed at different geographical locations, as well as with different housing status.
-		This seems biologically plausible given the importance of the flea vector in tranmission of \emph{Bartonella sp.}, and the documented difference in rates of \emph{Bartonella sp.} seroprevalence accross the country \cite{Jameson1995a}.
-		Housing status is also a good proxy for flea exposure, with outdoor cats much more likely to be exposed to other cats and environments where they are likly to pick up fleas.
+		This seems biologically plausible given the importance of the flea vector in transmission of \emph{Bartonella sp.}, and the documented difference in rates of \emph{Bartonella sp.} seroprevalence across the country \cite{Jameson1995a}.
+		Housing status is also a good proxy for flea exposure, with outdoor cats much more likely to be exposed to other cats and environments where they are likely to pick up fleas.
 		Both of these interactions were controlled for in the analysis stage of this study and included as a covariate in the final model.
 
 		Potential confounders in this study included age and housing status. 
-		Younger cats are more likley to engage in rough play behaviour, and hence develop uveitis due to trauma. Younger cats are also more likely to becom infected with \emph{Bartonella sp.}.
-		This potential confounder was controlled at the enrolling stage via thorough examination of cases and exclusion if there was any evidence of trauma, either through locating a corneal ulcer through using flurocin, or through any superficial wounds around the facial area.
+		Younger cats are more likely to engage in rough play behaviour, and hence develop uveitis due to trauma. Younger cats are also more likely to become infected with \emph{Bartonella sp.}.
+		This potential confounder was controlled at the enrolling stage via thorough examination of cases and exclusion if there was any evidence of trauma, either through locating a corneal ulcer through using fluorescein, or any superficial wounds around the facial area.
 		Age as a confounder was also controlled at the analysis stage by including it as a covariate in the model.
 
 		
 		Housing status is another potential confounder. Cats housed outdoors are more likely to be exposed to fleas and hence have higher seroprevalance rates.
-		Outdoor cats are also more likely to experience a traumatic event in the environment, and also more likely to contract FIV/FeLV through interations with other cats.
+		Outdoor cats are also more likely to experience a traumatic event in the environment, and also more likely to contract FIV/FeLV through interactions with other cats.
 		This was controlled in the analysis stage by testing all cases and controls for FIV/FeLV and excluding any positives from the analysis.
 
 
-		It is possible that misclassification bias resulted in the underreporting of uveitis in the control groups. General practice Veterinarians may not have the training or equipment nececary to identify the signs of uveitis and hence some controls may actually be contorls.
-		This potential bias was limited by strict inclusion criteria of controls consisting of only cats visiting the hospital for an annual vaccination/chaeckup. 
-		This was further controlled in the analyis stage by querying medical record database and removing any control cats that went on to develop uveitis following the study period.
+		It is possible that misclassification bias resulted in the underreporting of uveitis in the control groups. General practice Veterinarians may not have the training or equipment necessary to identify the signs of uveitis and hence some controls may actually be controls.
+		This potential bias was limited by strict inclusion criteria of controls consisting of only cats visiting the hospital for an annual vaccination/checkup. 
+		This was further controlled in the analysis stage by querying medical record database and removing any control cats that went on to develop uveitis following the study period.
 
 
-		Selection bias may have also occured due to the cats that were included in the study are by defintion owned by owners that care about their animals, and are more likely to engage in basic animal husbandry (good diet, regular vaccinations, flea control), and are more likely to notice and attend a veterinarian if any signs of uveitis occur.  
+		Selection bias may have also occurred due to the cats that were included in the study are by definition owned by owners that care about their animals, and are more likely to engage in basic animal husbandry (good diet, regular vaccinations, flea control), and are more likely to notice and attend a veterinarian if any signs of uveitis occur.  
 		This source of bias is of little concern however as the reference population for this study is animals reporting to veterinary hospitals so the sample analysed will yield an unbiased estimate of effect.
 
 
 		Observer bias was also a possibility in the diagnosis of uveitis.
-		Rates of uveitis diagnosis was assessed for each board certified opthalmologist in the study by comparing number of uveitis cases with total number of opthalmologic cases seen per year. This uveitis diagnosis rate was compared to the pooled uveitis diagnosis rate from all optahlmologists for each facility, and for all opthalmologist in this study.
-		ANOVA analsis revealed a non signifigant facility and individual effect, suggesting diagnosis was fairly consistent across opthalmologists.
-		In addition, the retrospective nature of this study meant that at the time of diagnosis the practitioner could not have been influenced by the study hypothesis and making was hence not neccecary. 
+		Rates of uveitis diagnosis was assessed for each board certified ophthalmologist in the study by comparing number of uveitis cases with total number of opthalmologic cases seen per year. This uveitis diagnosis rate was compared to the pooled uveitis diagnosis rate from all ophthalmologists for each facility, and for all ophthalmologist in this study.
+		ANOVA analysis revealed a non significant facility and individual effect, suggesting diagnosis was fairly consistent across ophthalmologists.
+		In addition, the retrospective nature of this study meant that at the time of diagnosis the practitioner could not have been influenced by the study hypothesis and making was hence not necessary. 
 
 
 		Temporal Bias was also possibly present in this study due to the nature of \emph{Bartonella sp.} infection and the testing method chosen. 
@@ -182,24 +181,23 @@ his study is awesome.
 		Some previous studies have utilised controls from an animal shelter. Cats in a shelter are much more likely to have been outdoors and exposed to fleas, increasing exposure, and may have increased risk of developing uveitis due to trauma and FIV/FeLV exposure from other cats.
 		This study utilised cats admitted for annual vaccination as controls and findings are hence applicable to the many privately owned cats in the United States.
 
-		A major strength of this study is the high data quality maintained throughout record colleciton and analysis, and the large numbers of cats from a diverse geographical area involved in this study.
-
+		A major strength of this study is the high data quality maintained throughout record collection and analysis, and the large numbers of cats from a diverse geographical area involved in this study.
 
 
 		Using indoor/outdoor status as proxy for flea exposure is a potential weakness of this study. 
 		This design could be improved with actual flea exposure history from owners, although there is potential for misclassification bias resulting from the stigma surrounding flea infection.
 		
 		
-		The difficulty in coming up with a strict case defintion for uveitis is another issue with this study. 
-		Board Certified Opthalmologists are certainly the most qualified to assess cases of uveitis, there is still the possibility of diagnostic criteria differing between clinicians. 
-		This is in comparison to other diseases of the eys such as glaucomo (also a potential sequale to uveitis) where an objective test (measuring Intra ocular pressure with tonometry) and strict cutoff value can be utilised to form a consistsent case definition.
-		This potential weakness was tested as explained above and there were no abnormalities found in uveitis diagnosis rates between opthalmologists.
+		The difficulty in coming up with a strict case definition for uveitis is another issue with this study. 
+		Board Certified Ophthalmologists are certainly the most qualified to assess cases of uveitis, there is still the possibility of diagnostic criteria differing between clinicians. 
+		This is in comparison to other diseases of the eye such as glaucoma (also a potential sequale to uveitis) where an objective test (measuring Intra ocular pressure with tonometry) and strict cutoff value can be utilised to form a consistent case definition.
+		This potential weakness was tested as explained above and there were no abnormalities found in uveitis diagnosis rates between ophthalmologists.
 
 
-		The retrospective nature of this study made it difficult to assess causation as discussed above under potential temporal bias. The retrospective record analysis meant many records were missing the recquired information to be included in the study.
+		The retrospective nature of this study made it difficult to assess causation as discussed above under potential temporal bias. The retrospective record analysis meant many records were missing the required information to be included in the study.
 
 		
-		It is clear there is more work recquired to further investigate the relationship between feline uveitis and \emph{Bartonella sp.} infection.
+		It is clear there is more work required to further investigate the relationship between feline uveitis and \emph{Bartonella sp.} infection.
 \newpage
 
 \begin{figure*}[h!]
@@ -212,7 +210,7 @@ his study is awesome.
 \begin{figure*}[h!]
 	\centering
 	\includegraphics[scale=0.5]{table1.jpg}
-	\caption{Characteristics of study participants and sample size calulations.}
+	\caption{Characteristics of study participants and sample size calculations.}
 	\label{tab:1}
 \end{figure*}
  
@@ -239,9 +237,6 @@ his study is awesome.
 \end{document}
 
 %%%%%
-%% cats admitting to banfield - indoor, looked after, less flea risk.
-
-% need to establish prev in control control group and then establish sample size based on OR you want - (2 - doubling fo risk)
 
 % interactoins - 
 %% make streamlined as possible. but need at least one confounder, not necc any interactions, can say did not find any (kim paper for technique - none stat sig so not included). potential effect modify - wualitative. 
@@ -250,10 +245,3 @@ his study is awesome.
 % fig 1 - exposure b \emph{Bartonella sp.} , outcome ev.
 
 % diagram bartonella causing uveitis, age associated w bartonella and uveitis (double ended arrow.) then show in table.( anythign in table that same do not need to have in diagram.
-
-% adress in study limitation - only cats that are looked after - findings only apply to this 
-
-% strength - most cats that would be worried about
-
-% summ up - further needed - take to cohort, clinical trial
-
